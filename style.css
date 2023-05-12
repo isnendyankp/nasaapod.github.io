@@ -58,6 +58,9 @@ body {
   user-select: none;
 }
 
+.clickable:hover {
+  color: rgb(0, 99, 199);
+}
 
 /* Images Container */
 .images-container {
