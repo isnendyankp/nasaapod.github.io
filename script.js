@@ -51,6 +51,12 @@ function updateDOM() {
     // Copyright
     const copyright = document.createElement('span');
     copyright.textContent = ` ${result.copyright}`;
+    // Append
+    footer.append(date, copyright);
+    cardBody.append(cardTitle, saveText, cardText, footer);
+    link.appendChild(image);
+    card.append(link, cardBody);
+    console.log(card);
   });
 }
 
@@ -61,7 +67,7 @@ async function getNasaPictures() {
   try {
     const response = await fetch(apiUrl);
     resultsArray = await response.json();
-    console.log(resultsArray);
+    // console.log(resultsArray);
     updateDOM();
   } catch (error) {
     // Catch Error Here
