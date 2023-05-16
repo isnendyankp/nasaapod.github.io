@@ -13,7 +13,7 @@ const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=${co
 let resultsArray = [];
 
 function updateDOM() {
-  resultsArray.forEach((item) => {
+  resultsArray.forEach((result) => {
     // Card Container
     const card = document.createElement('div');
     card.classList.add('card');
@@ -56,7 +56,7 @@ function updateDOM() {
     cardBody.append(cardTitle, saveText, cardText, footer);
     link.appendChild(image);
     card.append(link, cardBody);
-    console.log(card);
+    imagesContainer.appendChild(card);
   });
 }
 
