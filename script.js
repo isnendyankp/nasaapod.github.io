@@ -28,6 +28,29 @@ function updateDOM() {
     image.alt = 'NASA Picture of the Day';
     image.loading = 'lazy';
     image.classList.add('card-img-top');
+    // Card Body
+    const cardBody = document.createElement('div');
+    cardBody.classList.add('card-body');
+    // Card Title
+    const cardTitle = document.createElement('h5');
+    cardTitle.classList.add('card-title');
+    cardTitle.textContent = result.title;
+    // Save Text
+    const saveText = document.createElement('p');
+    saveText.classList.add('clickable');
+    saveText.textContent = 'Add To Favorites';
+    // Card Text
+    const cardText = document.createElement('p');
+    cardText.textContent = result.explanation;
+    // Footer Container
+    const footer = document.createElement('small');
+    footer.classList.add('text-muted');
+    // Date
+    const date = document.createElement('strong');
+    date.textContent = result.date;
+    // Copyright
+    const copyright = document.createElement('span');
+    copyright.textContent = ` ${result.copyright}`;
   });
 }
 
