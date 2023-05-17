@@ -40,7 +40,7 @@ function updateDOM() {
     const saveText = document.createElement('p');
     saveText.classList.add('clickable');
     saveText.textContent = 'Add To Favorites';
-    saveText.onclick = `saveFavorite('${result.url}')`;
+    saveText.setAttribute('onclick', `saveFavorite('${result.url}')`);
     // Card Text
     const cardText = document.createElement('p');
     cardText.textContent = result.explanation;
