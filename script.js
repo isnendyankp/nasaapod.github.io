@@ -84,6 +84,11 @@ function saveFavorite(itemUrl) {
     if (item.url.includes(itemUrl)) {
       favorites[itemUrl] = item;
       console.log(favorites);
+      // Show Save Confirmation for 2 seconds
+      saveConfirmed.hidden = false;
+      setTimeout(() => {
+        saveConfirmed.hidden = true;
+      }, 2000);
     }
   });
 }
