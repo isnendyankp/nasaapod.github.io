@@ -15,7 +15,7 @@ let favorites = {};
 
 function createDOMNodes(page) {
   // Load ResultsArray or Favorites
-  const currentArray = page === 'results' ? resultsArray : favorites;
+  const currentArray = page === 'results' ? resultsArray : Object.values(favorites);
   console.log('Current Array', page, currentArray);
   currentArray.forEach((result) => {
     // Card Container
