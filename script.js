@@ -64,7 +64,12 @@ function createDOMNodes() {
 }
 
 function updateDOM() {
-  
+  // Get Favorites from localStorage
+  if (localStorage.getItem('nasaFavorites')) {
+    favorites = JSON.parse(localStorage.getItem('nasaFavorites'));
+    console.log('favorites from localStorage', favorites);
+  }
+  createDOMNodes();
 }
 
 // Get 10 images from NASA API
