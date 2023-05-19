@@ -77,6 +77,7 @@ function updateDOM(page) {
     favorites = JSON.parse(localStorage.getItem('nasaFavorites'));
     console.log('favorites from localStorage', favorites);
   }
+  imagesContainer.textContent = '';
   createDOMNodes(page);
 }
 
