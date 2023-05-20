@@ -89,7 +89,7 @@ async function getNasaPictures() {
     const response = await fetch(apiUrl);
     resultsArray = await response.json();
     // console.log(resultsArray);
-    updateDOM('favorites');
+    updateDOM('results');
   } catch (error) {
     // Catch Error Here
   }
