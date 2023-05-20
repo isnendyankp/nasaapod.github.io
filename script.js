@@ -16,7 +16,6 @@ let favorites = {};
 function createDOMNodes(page) {
   // Load ResultsArray or Favorites
   const currentArray = page === 'results' ? resultsArray : Object.values(favorites);
-  console.log('Current Array', page, currentArray);
   currentArray.forEach((result) => {
     // Card Container
     const card = document.createElement('div');
@@ -75,7 +74,6 @@ function updateDOM(page) {
   // Get Favorites from localStorage
   if (localStorage.getItem('nasaFavorites')) {
     favorites = JSON.parse(localStorage.getItem('nasaFavorites'));
-    console.log('favorites from localStorage', favorites);
   }
   imagesContainer.textContent = '';
   createDOMNodes(page);
