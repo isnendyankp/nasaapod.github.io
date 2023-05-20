@@ -13,8 +13,16 @@ const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=${co
 let resultsArray = [];
 let favorites = {};
 
-function showContent() {
+// Scroll To Top, Remove Loader, Show Content
+function showContent(page) {
   window.scrollTo({ top: 0, behavior: 'instant' });
+  if (page === 'results') {
+    resultsNav.classList.remove('hidden');
+    favoritesNav.classList.add('hidden');
+  } else {
+    resultsNav.classList.add('hidden');
+    favoritesNav.classList.remove('hidden');
+  }
   loader.classList.add('hidden');
 }
 
